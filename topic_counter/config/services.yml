@@ -1,0 +1,10 @@
+services:
+  hybridmind.topic_counter.listener:
+    class: hybridmind\topic_counter\event\listener
+    arguments:
+      - '@config'
+      - '@template'
+      - '@user'
+      - '@dbal.conn'
+    tags:
+      - name: event.listener
